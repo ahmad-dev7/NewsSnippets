@@ -1,6 +1,6 @@
 # NewsSnippets 📱
 
-A modern, feature-rich news application built with Flutter that delivers the latest news updates in an engaging and user-friendly interface.
+A modern, feature-rich news application built with Flutter for smooth performance and Getx for efficient state management that delivers the latest news updates in an engaging and user-friendly interface.
 
 <img src="https://github.com/user-attachments/assets/e3eb4e56-861b-40b7-9577-566484e7129c" alt="NewsSnippets App Banner" height="300">
 
