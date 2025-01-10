@@ -10,9 +10,9 @@ class MyNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     var myCtrl = Get.find<MyController>();
     return Material(
-      elevation: 30,
+      elevation: 10,
       color: Colors.transparent,
-      shadowColor: Theme.of(context).shadowColor.withOpacity(0.5),
+      shadowColor: Theme.of(context).shadowColor.withOpacity(0.25),
       child: Obx(
         () => CrystalNavigationBar(
           currentIndex: myCtrl.activeIndex.value,
@@ -21,8 +21,8 @@ class MyNavigationBar extends StatelessWidget {
             myCtrl.activeIndex.value = val;
             myCtrl.pageController.value.animateToPage(
               myCtrl.activeIndex.value,
-              duration: Durations.medium3,
-              curve: Curves.easeInOutQuint,
+              duration: Durations.medium1,
+              curve: Curves.easeIn,
             );
           },
           curve: Curves.decelerate,
@@ -33,7 +33,7 @@ class MyNavigationBar extends StatelessWidget {
           indicatorColor: Theme.of(context).primaryColor,
           paddingR: const EdgeInsets.symmetric(horizontal: 20),
           enableFloatingNavBar: true,
-          duration: Durations.extralong2,
+          duration: Durations.medium1,
           margin: const EdgeInsets.all(0),
           marginR: const EdgeInsets.fromLTRB(50, 35, 50, 10),
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,

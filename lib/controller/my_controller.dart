@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:news_snippets/controller/animation_controller.dart';
 import 'package:news_snippets/controller/chip_data_controller.dart';
 import 'package:news_snippets/controller/data_controller.dart';
+import 'package:news_snippets/controller/saved_data_controller.dart';
 import 'package:news_snippets/controller/search_data_controller.dart';
 import 'package:news_snippets/pages/bookmark_page.dart';
 import 'package:news_snippets/pages/home_page.dart';
@@ -31,6 +32,7 @@ class MyController extends GetxController {
   var activeTrendingCard = 0.obs;
   var isImageViewerDismissed = true.obs;
   var activeChipTopic = 3.obs;
+  var listKey = GlobalKey<SliverAnimatedListState>();
 
   @override
   void onInit() {
@@ -38,6 +40,7 @@ class MyController extends GetxController {
     Get.lazyPut(() => MyAnimationController(), fenix: true);
     Get.lazyPut(() => ChipDataController(), fenix: true);
     Get.lazyPut(() => SearchDataController(), fenix: true);
+    Get.lazyPut(() => SavedDataController(), fenix: true);
     addScrollListener();
     showTopButton.listen((bool _) => animateGoToTopButton(_));
     super.onInit();

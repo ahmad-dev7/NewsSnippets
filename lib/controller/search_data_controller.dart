@@ -38,8 +38,8 @@ class SearchDataController extends GetxController {
   void searchTopic(String text) async {
     searchTerm.value = text;
     try {
-      final response = await http.get(Uri.parse('${API.search}$text'), headers: {
-        'X-DEVICE-ID': '786',
+      final response = await http.get(Uri.parse('${API.search}$text&max_limit=30'), headers: {
+        'X-DEVICE-ID': DateTime.now().toString(),
       });
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);

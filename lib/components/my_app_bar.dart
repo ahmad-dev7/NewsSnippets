@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:news_snippets/components/my_text.dart';
+import 'package:news_snippets/components/theme_switcher.dart';
+import 'package:news_snippets/controller/my_controller.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({super.key});
@@ -18,12 +21,19 @@ class MyAppBar extends StatelessWidget {
           child: Material(
             color: Theme.of(context).colorScheme.secondary.withOpacity(0.1),
             elevation: 20,
-            child: Image.asset('assets/images/logo.png', height: 40),
+            child: Image.asset('assets/images/app_logo.png', height: 40, width: 40),
           ),
         ),
         title: const MyText('News Snippets'),
       ),
-      //actions: const [ThemeSwitcherButton()],
+      actions: [
+        Obx(
+          () => Visibility(
+            visible: Get.find<MyController>().activeIndex.value == 2,
+            child: const ThemeSwitcherButton(),
+          ),
+        ),
+      ],
     );
   }
 }

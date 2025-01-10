@@ -1,10 +1,14 @@
-import 'package:awesome_bookmark_icon_button/awesome_bookmark_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:get/get.dart';
+import 'package:news_snippets/components/home/news_tile/news_tile.dart';
 import 'package:news_snippets/components/my_button.dart';
 import 'package:news_snippets/components/my_text.dart';
 import 'package:news_snippets/components/read_button.dart';
 import 'package:news_snippets/components/source_button.dart';
+import 'package:news_snippets/controller/my_controller.dart';
+import 'package:news_snippets/controller/saved_data_controller.dart';
 import 'package:news_snippets/model/news_data.dart';
 
 class NewsTileInfo extends StatelessWidget {
@@ -82,10 +86,35 @@ class NewsTileInfo extends StatelessWidget {
             ),
             //* Save button
             Expanded(
-              child: BookMarkIconButton(
-                onPressed: () {},
-                isSaved: false,
-                padding: const EdgeInsets.all(10),
+              child: SizedBox(
+                width: 40,
+                child: Obx(
+                  () {
+                    var savedDataCtrl = Get.find<SavedDataController>();
+                    var isSaved = savedDataCtrl.savedNewsData.contains(newsData);
+                    return IconButton(
+                      onPressed: () {
+                        var savedDataCtrl = Get.find<SavedDataController>();
+                        var ctrl = Get.find<MyController>();
+
+                        if (savedDataCtrl.savedNewsData.contains(newsData)) {
+                          var index = savedDataCtrl.savedNewsData.indexOf(newsData);
+                          if (ctrl.activeIndex.value == 2) {
+                            removeItemWithAnimation(index, savedDataCtrl, ctrl);
+                          } else {
+                            debugPrint("Came here");
+                            savedDataCtrl.savedNewsData.removeAt(index);
+                          }
+                        } else {
+                          // Add the item
+                          savedDataCtrl.savedNewsData.add(newsData);
+                        }
+                      },
+                      icon: Icon(isSaved ? Icons.bookmark_added : Icons.bookmark_add_outlined),
+                      padding: const EdgeInsets.all(10),
+                    );
+                  },
+                ),
               ),
             ),
             // const Expanded(
@@ -96,4 +125,26 @@ class NewsTileInfo extends StatelessWidget {
       ],
     );
   }
+}
+
+void removeItemWithAnimation(int index, SavedDataController savedCtrl, MyController ctrl) {
+  debugPrint("triggered removeWithAnimation");
+
+  // Save the data to be removed for animation
+  var removeData = savedCtrl.savedNewsData[index];
+  savedCtrl.savedNewsData.remove(removeData);
+
+  // Trigger the animation for removal
+  ctrl.listKey.currentState?.removeItem(
+    index,
+    (context, animation) {
+      return SizeTransition(
+        sizeFactor: animation,
+        child: NewsTile(newsData: removeData),
+      ).animate().slideX(duration: Durations.extralong1).fade();
+    },
+    duration: Durations.medium1, // Match the animation duration
+  );
+
+  debugPrint("animated removal");
 }

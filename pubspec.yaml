@@ -43,7 +43,6 @@ dependencies:
   http: ^1.2.2
   fancy_shimmer_image: ^2.0.3
   visibility_detector: ^0.4.0+2
-  awesome_bookmark_icon_button: ^0.0.2
   webview_flutter: ^4.8.0
   shimmer: ^3.0.0
   linear_progress_bar: ^1.1.2

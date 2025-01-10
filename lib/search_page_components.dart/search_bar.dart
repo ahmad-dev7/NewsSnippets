@@ -29,6 +29,7 @@ class MySearchBar extends StatelessWidget {
         builder: (context, controller, focusNode) => TextField(
           controller: controller,
           focusNode: focusNode,
+          onEditingComplete: () => onSearchTopic(textController.text),
           onChanged: (value) {
             if (textController.value.text.isNotEmpty) {
               Get.find<SearchDataController>().showClearTextIcon.value = true;

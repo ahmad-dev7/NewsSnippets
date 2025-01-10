@@ -31,7 +31,7 @@ class MySliverAppBAr extends StatelessWidget {
             () => WheelSlider.customWidget(
               totalCount: 8,
               initValue: ctrl.activeChipTopic.value,
-              perspective: 0.002,
+              perspective: 0.004,
               isInfinite: false,
               scrollPhysics: const BouncingScrollPhysics(),
               onValueChanged: (i) {
@@ -40,7 +40,7 @@ class MySliverAppBAr extends StatelessWidget {
               },
               hapticFeedbackType: HapticFeedbackType.vibrate,
               showPointer: false,
-              itemSize: 130,
+              itemSize: 150,
               horizontalListHeight: 60,
               children: List.generate(
                 8,
@@ -71,7 +71,7 @@ class MySliverAppBAr extends StatelessWidget {
         expandedTitleScale: 1,
         background: Wrap(
           children: [
-            SectionDivider(title: 'Featured', onSeeAll: () {}),
+            const SectionDivider(title: 'Featured', icon: Icons.featured_play_list_outlined),
             FeaturedCard(newsList: topStories),
           ],
         ),

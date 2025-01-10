@@ -62,68 +62,6 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-
-                // SliverList(
-                //   delegate: SliverChildBuilderDelegate(
-                //     (context, _) {
-                //       var active = ctrl.activeChipTopic.value;
-                //       var chips = chipDataCtrl.chips[active];
-                //       var isFirst = chips.value.page == 1;
-                //       return _ < chipData.length
-                //           ? Skeletonizer(
-                //               enableSwitchAnimation: true,
-                //               enabled: !chipDataCtrl.isChipDataLoaded.value,
-                //               child: NewsTile(newsData: chipData[_].newsData!),
-                //             )
-                //           : Padding(
-                //               padding: const EdgeInsets.only(bottom: 20),
-                //               child: Row(
-                //                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //                 children: [
-                //                   MyTextIconButton(
-                //                     onTap: isFirst
-                //                         ? null
-                //                         : () {
-                //                             chips.value.page--;
-                //                             chipDataCtrl.getChipData();
-                //                             ctrl.scrollController.value.animateTo(
-                //                               360,
-                //                               duration: Durations.extralong1,
-                //                               curve: Curves.ease,
-                //                             );
-                //                           },
-                //                     leading: const Icon(Icons.arrow_back_ios_new),
-                //                     trailing: MyText(
-                //                       'Previous Page',
-                //                       color: isFirst
-                //                           ? Theme.of(context).colorScheme.secondary.withOpacity(.4)
-                //                           : Theme.of(context).primaryColor,
-                //                     ),
-                //                   ),
-                //                   MyTextIconButton(
-                //                     onTap: () {
-                //                       chips.value.page++;
-                //                       chipDataCtrl.getChipData();
-                //                       ctrl.scrollController.value.animateTo(
-                //                         360,
-                //                         duration: Durations.extralong1,
-                //                         curve: Curves.ease,
-                //                       );
-                //                     },
-                //                     leading: MyText(
-                //                       'Next Page',
-                //                       color: Theme.of(context).primaryColor,
-                //                     ),
-                //                     trailing: const Icon(Icons.arrow_forward_ios),
-                //                   ),
-                //                 ],
-                //               ),
-                //             );
-                //     },
-                //     childCount: chipData.length + 1,
-                //     addRepaintBoundaries: true,
-                //   ),
-                // ),
               ],
             ),
           );

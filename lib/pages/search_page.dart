@@ -36,21 +36,21 @@ class SearchPage extends StatelessWidget {
               child: Obx(
                 () => SectionDivider(
                   title: searchCtrl.searchData.isEmpty ? 'Trending' : searchCtrl.searchTerm.value.capitalize,
-                  onSeeAll: () {},
+                  icon: Icons.explore_outlined,
                 ),
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) => Obx(
-                () => NewsTile(
+          Obx(
+            () => SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) => NewsTile(
                   newsData: searchCtrl.searchData.isEmpty
                       ? trendingNews[index].newsData!
                       : searchCtrl.searchData[index].newsData!,
                 ),
+                childCount: searchCtrl.searchData.isEmpty ? trendingNews.length - 1 : searchCtrl.searchData.length - 1,
               ),
-              childCount: searchCtrl.searchData.isEmpty ? trendingNews.length - 1 : searchCtrl.searchData.length - 1,
             ),
           )
         ],

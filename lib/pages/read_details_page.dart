@@ -8,6 +8,7 @@ import 'package:news_snippets/components/my_floating_button.dart';
 import 'package:news_snippets/components/my_shimmer.dart';
 import 'package:news_snippets/components/my_text.dart';
 import 'package:news_snippets/components/source_button.dart';
+import 'package:news_snippets/controller/saved_data_controller.dart';
 import 'package:news_snippets/model/news_data.dart';
 import 'package:news_snippets/pages/image_viewer.dart';
 
@@ -17,6 +18,8 @@ class ReadDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var savedCtrl = Get.find<SavedDataController>();
+
     return Scaffold(
       extendBody: true,
       extendBodyBehindAppBar: true,
@@ -56,10 +59,14 @@ class ReadDetails extends StatelessWidget {
                 Positioned(
                   top: 4,
                   right: 8,
-                  child: FloatingIconButton(
-                    onTap: () => 'Save',
-                    icon: Icons.bookmark_outline,
-                  ).animate().slide(delay: Durations.medium4),
+                  child: Obx(() {
+                    var isSaved = savedCtrl.savedNewsData.contains(newsData);
+                    return FloatingIconButton(
+                      onTap: () =>
+                          isSaved ? savedCtrl.savedNewsData.remove(newsData) : savedCtrl.savedNewsData.add(newsData),
+                      icon: isSaved ? Icons.bookmark_added : Icons.bookmark_add_outlined,
+                    ).animate().slide(delay: Durations.medium4);
+                  }),
                 ),
               ],
             ),
@@ -98,9 +105,7 @@ class ReadDetails extends StatelessWidget {
                         child: Material(
                           color: Colors.transparent,
                           child: MyButton(
-                            label: newsData.categoryNames!.isNotEmpty
-                                ? newsData.categoryNames![0]
-                                : 'Random',
+                            label: newsData.categoryNames!.isNotEmpty ? newsData.categoryNames![0] : 'Random',
                           ),
                         ),
                       ),
@@ -118,9 +123,7 @@ class ReadDetails extends StatelessWidget {
                     children: List.generate(
                       newsData.relevancyTags!.length,
                       (index) => MyButton(
-                        label: newsData.relevancyTags!.isNotEmpty
-                            ? '#${newsData.relevancyTags![index]}'
-                            : '',
+                        label: newsData.relevancyTags!.isNotEmpty ? '#${newsData.relevancyTags![index]}' : '',
                       ),
                     ),
                   ),
