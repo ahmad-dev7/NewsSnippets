@@ -4,8 +4,6 @@ A modern, feature-rich news application built with Flutter that delivers the lat
 
 <img src="https://github.com/user-attachments/assets/e3eb4e56-861b-40b7-9577-566484e7129c" alt="NewsSnippets App Banner" height="300">
 
-
-
 ## 🌟 Features
 
 ### Featured News Carousel
