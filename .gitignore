@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+# Sensitive info
+**/lib/end_points.dart
+
 # IntelliJ related
 *.iml
 *.ipr
