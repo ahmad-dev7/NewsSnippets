@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_snippets/components/home/news_tile/news_tile.dart';
 import 'package:news_snippets/components/home/section_divider.dart';
-import 'package:news_snippets/components/my_text.dart';
 import 'package:news_snippets/controller/data_controller.dart';
 import 'package:news_snippets/controller/my_controller.dart';
 import 'package:news_snippets/controller/search_data_controller.dart';

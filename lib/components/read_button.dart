@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:news_snippets/components/custom_cupertino.dart';
-import 'package:news_snippets/components/my_text.dart';
 import 'package:news_snippets/controller/data_controller.dart';
 import 'package:news_snippets/model/news_data.dart';
 import 'package:news_snippets/pages/read_details_page.dart';

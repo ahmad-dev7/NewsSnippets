@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:news_snippets/components/my_text.dart';
-import 'package:news_snippets/components/theme_switcher.dart';
 
 class MyAppBar extends StatelessWidget {
   const MyAppBar({super.key});
