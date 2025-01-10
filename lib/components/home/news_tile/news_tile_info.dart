@@ -132,18 +132,29 @@ void removeItemWithAnimation(int index, SavedDataController savedCtrl, MyControl
 
   // Save the data to be removed for animation
   var removeData = savedCtrl.savedNewsData[index];
-  savedCtrl.savedNewsData.remove(removeData);
+  savedCtrl.savedNewsData.removeAt(index); // Use removeAt to ensure index consistency
 
   // Trigger the animation for removal
   ctrl.listKey.currentState?.removeItem(
     index,
     (context, animation) {
-      return SizeTransition(
-        sizeFactor: animation,
-        child: NewsTile(newsData: removeData),
-      ).animate().slideX(duration: Durations.extralong1).fade();
+      return Stack(
+        children: [
+          // SizeTransition for the list item animation
+          SizeTransition(
+            sizeFactor: animation,
+            child: const SizedBox.shrink(), // Placeholder for size animation
+          ),
+
+          // FadeOutLeft animation for the removing item
+          NewsTile(newsData: removeData)
+              .animate()
+              .fadeOut(duration: Durations.medium1) // Fade effect
+              .moveX(begin: 0, end: -context.width), // Left slide effect
+        ],
+      );
     },
-    duration: Durations.medium1, // Match the animation duration
+    duration: Durations.medium4, // Match the animation duration
   );
 
   debugPrint("animated removal");
