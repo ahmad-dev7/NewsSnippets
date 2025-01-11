@@ -2,7 +2,7 @@
 
 A modern, feature-rich news application built with Flutter for smooth performance and Getx for efficient state management that delivers the latest news updates in an engaging and user-friendly interface.
 
-<img src="https://github.com/user-attachments/assets/e3eb4e56-861b-40b7-9577-566484e7129c" alt="NewsSnippets App Banner" height="300">
+<img src="https://github.com/user-attachments/assets/b5327236-2311-4fdc-b400-6e9f0afceedc" alt="NewsSnippets App Banner" height="450">
 
 ## 🌟 Features
 
@@ -48,20 +48,22 @@ A modern, feature-rich news application built with Flutter for smooth performanc
 
 ## 🎥 Demo
 
-[Watch the Demo Video](path_to_demo_video)
+[Demo of app](https://github.com/user-attachments/assets/8d45d749-bbd1-4142-90be-54da35cbea9e)
 
 ## 📸 Screenshots
 
 <table>
   <tr>
-    <td><img src="path_to_screenshot1.png" alt="Featured Section" width="200"/></td>
-    <td><img src="path_to_screenshot2.png" alt="Categories" width="200"/></td>
-    <td><img src="path_to_screenshot3.png" alt="Trending" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/b8182924-1fe1-45db-b188-8e83c4b260f9" alt="Featured & Categories" width="150"/></td>
+    <td><img src="https://github.com/user-attachments/assets/f986a8b0-7786-4321-a994-ade3e5c1d7f1" alt="Trending" width="150"/></td>
+    <td><img src="https://github.com/user-attachments/assets/c8a290ca-eb2d-4e46-be90-088fe9b62860" alt="Search" width="150"/></td>
+    <td><img src="https://github.com/user-attachments/assets/0911da2f-c21e-4d4d-9388-12087815ea5e" alt="Bookmarks" width="150"/></td>
   </tr>
   <tr>
-    <td><img src="path_to_screenshot4.png" alt="Search" width="200"/></td>
-    <td><img src="path_to_screenshot5.png" alt="Bookmarks" width="200"/></td>
-    <td><img src="path_to_screenshot6.png" alt="Theme Toggle" width="200"/></td>
+    <td><img src="https://github.com/user-attachments/assets/c392d2e3-4cfd-4b30-871c-e0f66399bfac" alt="Featured & Categories" width="150"/></td>
+    <td><img src="https://github.com/user-attachments/assets/12b0a49d-1aec-4eaf-8343-7700c8573303" alt="Trending" width="150"/></td>
+    <td><img src="https://github.com/user-attachments/assets/93c35b93-6e24-469b-92d5-c853d54e9d36" alt="Search" width="150"/></td>
+    <td><img src="https://github.com/user-attachments/assets/7058dbb1-8627-417c-a1d5-7cb5e0f3bf68" alt="Bookmarks" width="150"/></td>
   </tr>
 </table>
 
