@@ -6,7 +6,6 @@
 - **Deeper Insights**: Want to know more? Dive into the 180-word description for a quick yet detailed overview.
 - **Full Story Access**: Still curious? Tap to visit the original source for the complete article.
 
-  
 <img src="https://github.com/user-attachments/assets/b5327236-2311-4fdc-b400-6e9f0afceedc" alt="NewsSnippets App Banner" height="450">
 
 ## 🌟 Features
@@ -80,7 +79,6 @@
 - **Architecture:** Clean Architecture
 - **API Integration:** REST APIs
 
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -91,13 +89,11 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
 ## 👤 Author
 
 **Ahmad Ali**
 
 - LinkedIn: [Ahmad Ali](https://www.linkedin.com/in/aali-dev/)
 - GitHub: [@ahmad-dev7](https://github.com/ahmad-dev7)
-
 
 ⭐️ If you like NewsSnippets, please give it a star on GitHub! ⭐️
