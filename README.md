@@ -80,55 +80,6 @@
 - **Architecture:** Clean Architecture
 - **API Integration:** REST APIs
 
-## 📦 Dependencies
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  get: ^4.6.5 # Add actual version
-  http: ^0.13.5 # Add actual version
-  cached_network_image: ^3.2.3 # Add actual version
-  # Add other dependencies
-```
-
-## 🚀 Installation
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/yourusername/news-snippets.git
-```
-
-2. Navigate to the project directory
-
-```bash
-cd news-snippets
-```
-
-3. Install dependencies
-
-```bash
-flutter pub get
-```
-
-4. Run the app
-
-```bash
-flutter run
-```
-
-## 🔧 Configuration
-
-1. Get your API key from [News API Provider]
-2. Create a `config.dart` file in the `lib` folder
-3. Add your API key:
-
-```dart
-class Config {
-  static const String apiKey = 'YOUR_API_KEY';
-}
-```
 
 ## 🤝 Contributing
 
@@ -140,23 +91,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
-Your Name
+**Ahmad Ali**
 
-- LinkedIn: [Your LinkedIn Profile](your_linkedin_profile_url)
-- GitHub: [@yourusername](your_github_profile_url)
+- LinkedIn: [Ahmad Ali](https://www.linkedin.com/in/aali-dev/)
+- GitHub: [@ahmad-dev7](https://github.com/ahmad-dev7)
 
-## 🙏 Acknowledgments
-
-- Thanks to [News API Provider] for providing the news data
-- Flutter community for excellent packages and support
-- All contributors who help to improve this project
-
----
 
 ⭐️ If you like NewsSnippets, please give it a star on GitHub! ⭐️
