@@ -1,7 +1,12 @@
 # NewsSnippets 📱
 
-A modern, feature-rich news application built with Flutter for smooth performance and Getx for efficient state management that delivers the latest news updates in an engaging and user-friendly interface.
+#### A cross-platform mobile application built with focus to consume news—fast, simple, and to the point! No more endless scrolling or getting lost in long articles. With NewsSnippets, you get:
 
+- **Concise News Titles**: Every news story summarized in just 60 words, giving you the essence of what’s happening instantly.
+- **Deeper Insights**: Want to know more? Dive into the 180-word description for a quick yet detailed overview.
+- **Full Story Access**: Still curious? Tap to visit the original source for the complete article.
+
+  
 <img src="https://github.com/user-attachments/assets/b5327236-2311-4fdc-b400-6e9f0afceedc" alt="NewsSnippets App Banner" height="450">
 
 ## 🌟 Features
