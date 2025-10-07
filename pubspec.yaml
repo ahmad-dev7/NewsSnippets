@@ -48,7 +48,7 @@ dependencies:
   linear_progress_bar: ^1.1.2
   url_launcher: ^6.3.0
   awesome_snackbar_content: ^0.1.4
-  skeletonizer: ^1.4.2
+  # skeletonizer: ^1.4.2
   cached_network_image: ^3.4.0
   fast_cached_network_image: ^1.2.9
   toggle_switch: ^2.3.0

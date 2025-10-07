@@ -6,7 +6,6 @@ import 'package:news_snippets/controller/chip_data_controller.dart';
 import 'package:news_snippets/controller/data_controller.dart';
 import 'package:news_snippets/controller/my_controller.dart';
 import 'package:news_snippets/model/news_data.dart';
-import 'package:skeletonizer/skeletonizer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -33,10 +32,7 @@ class HomePage extends StatelessWidget {
           var trending = dataCtrl.trendingNews.value.data!.newsList!;
           var chipData = chipDataCtrl.chipNews.value.data!.newsList!;
           RxList<NewsList> news = chipData.obs;
-          return Skeletonizer(
-            enableSwitchAnimation: true,
-            enabled: !dataCtrl.isDataLoaded.value,
-            child: CustomScrollView(
+          return CustomScrollView(
               controller: ctrl.scrollController.value,
               slivers: [
                 const SliverToBoxAdapter(child: SizedBox(height: 10)),
@@ -53,17 +49,14 @@ class HomePage extends StatelessWidget {
                   },
                   child: SliverList(
                     delegate: SliverChildBuilderDelegate(
-                      (context, index) => Skeletonizer(
-                        enableSwitchAnimation: true,
-                        enabled: !chipDataCtrl.isChipDataLoaded.value,
-                        child: NewsTile(newsData: news[index].newsData!),
-                      ),
+                      (context, index) =>  NewsTile(newsData: news[index].newsData!),
+                      
                       childCount: news.length,
                     ),
                   ),
                 ),
               ],
-            ),
+            
           );
         },
       ),
